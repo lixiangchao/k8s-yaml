@@ -1,0 +1,5 @@
+/Ingress.yaml
+/traefik-ingress-control.yaml
+/traefik-rbac.yaml
+/traefik-web-ui.yaml
+/traefik.toml
