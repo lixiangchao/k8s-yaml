@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: traefik-ingress
+spec:
+  rules:
+  - host: product-eloan
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: product-eloan
+          servicePort: 80
+  - host: services-configure
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: services-configure
+          servicePort: 80
