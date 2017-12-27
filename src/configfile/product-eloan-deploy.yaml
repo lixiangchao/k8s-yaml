@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+ name: product-eloan
+spec:
+ replicas: 2
+ template:
+  metadata:
+   labels:
+    app: product-eloan
+  spec:
+   containers:
+   - name: product-eloan
+     image: 10.39.107.141:5000/product-eloan
+     ports:
+     - containerPort: 80

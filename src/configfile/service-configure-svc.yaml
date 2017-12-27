@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: services-configure
+  labels:
+    run: services-configure
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    nodePort: 30003
+    protocol: TCP
+  selector:
+    app: services-configure
+  type: NodePort

@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+ name: services-configure
+spec:
+ replicas: 2
+ template:
+  metadata:
+   labels:
+    app: services-configure
+  spec:
+   containers:
+   - name: services-configure
+     image: 10.39.107.141:5000/services-configure
+     ports:
+     - containerPort: 80
